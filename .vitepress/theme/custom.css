@@ -1,0 +1,16 @@
+.blue {
+    background: royalblue;
+}
+
+.orange {
+    background: orange;
+}
+
+.red {
+    background: orangered;
+}
+
+.blue, .orange, .red {
+    padding: 4px;
+    border-radius: 4px;
+}
