@@ -26,21 +26,15 @@ jobs:
               uses: actions/checkout@v3
               with:
                   fetch-depth: 0
-            - uses: pnpm/action-setup@v2
-              with:
-                  version: latest
-            - name: Setup Node
-              uses: actions/setup-node@v3
-              with:
-                  node-version: 18
-                  cache: pnpm
+            - name: Setup Bun
+              uses: oven-sh/setup-bun@v1
             - name: Setup Pages
               uses: actions/configure-pages@v3
             - name: Install dependencies
-              run: pnpm install
+              run: bun install
             - name: Build with VitePress
               run: |
-                  pnpm docs:build
+                  bun --bun run docs:build
                   touch .vitepress/dist/.nojekyll
             - name: Upload artifact
               uses: actions/upload-pages-artifact@v2
