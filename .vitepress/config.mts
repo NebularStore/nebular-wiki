@@ -2,6 +2,7 @@ import {defineConfig} from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+    base: "/nebular-wiki/",
     title: "Nebular Store",
     description: "A self-hostable cloud file storage",
     themeConfig: {
